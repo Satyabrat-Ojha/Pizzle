@@ -18,7 +18,7 @@ const NavbarFeatured = () => {
       setIndex(index < images.length - 1 ? index + 1 : 0);
     }
   };
-  console.log(index);
+  // console.log(index);
 
   return (
     <div className={styles.container}>
