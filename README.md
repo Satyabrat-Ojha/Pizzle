@@ -1,8 +1,13 @@
+# Pizzle
+An online Pizza ordering website 
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+Setup an .env file taking reference from .env.example file and the url could be generated from cloud.mongodb.com by creatign a database and connecting it with drivers.
+
+Run the development server:
 
 ```bash
 npm run dev
