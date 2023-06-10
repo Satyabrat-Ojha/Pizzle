@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
 .container {
   background-color: #d1411e;
   height: 100px;
@@ -59,6 +61,12 @@
 .listItem {
   margin: 0 20px;
   font-weight: 500;
+}
+
+.listItem h1 {
+  font-style: italic;
+  font-family: Satisfy;
+  font-size: 3rem;
 }
 
 .cart {

@@ -2,13 +2,16 @@ import styles from "@/styles/Product.module.css";
 import Image from "next/image";
 import { useState } from "react";
 import axios from "axios";
-import { set } from "mongoose";
+import { useDispatch } from "react-redux";
+import { addProduct } from "@/redux/cartSlice";
 
 const Product = ({ pizza }) => {
   const [price, setPrice] = useState(pizza.prices[0]);
   const [size, setSize] = useState(0);
   const [extras, setExtras] = useState([]);
   const [quantity, setQuantity] = useState(1);
+
+  const dispatch = useDispatch();
 
   const changePrice = (number) => {
     setPrice(price + number);
@@ -32,6 +35,10 @@ const Product = ({ pizza }) => {
     }
   };
 
+  const handleClick = () => {
+    dispatch(addProduct({ ...pizza, extras, price, quantity }));
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.left}>
@@ -46,7 +53,7 @@ const Product = ({ pizza }) => {
       </div>
       <div className={styles.right}>
         <h1 className={styles.title}>{pizza.title}</h1>
-        <span className={styles.price}>{price}</span>
+        <span className={styles.price}>${price}</span>
         <p className={styles.desc}>{pizza.desc}</p>
         <h3 className={styles.choose}>Choose the size</h3>
         <div className={styles.sizes}>
@@ -86,7 +93,9 @@ const Product = ({ pizza }) => {
             className={styles.quantity}
             min={1}
           />
-          <button className={styles.button}>Add to Cart</button>
+          <button className={styles.button} onClick={handleClick}>
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>
