@@ -1,5 +1,10 @@
 # Pizzle
-An online Pizza ordering website 
+An online Pizza ordering website
+
+<img width="947" alt="image" src="https://github.com/Satyabrat-Ojha/Pizzle/assets/93860609/3f18eab1-383d-4822-be9f-364dcfd827ba">
+<img width="948" alt="image" src="https://github.com/Satyabrat-Ojha/Pizzle/assets/93860609/d25ff5de-0fb0-4497-ac83-5f822b2f780d">
+<img width="947" alt="image" src="https://github.com/Satyabrat-Ojha/Pizzle/assets/93860609/02f3bd74-84e0-4b41-a4d5-b0abb184a40e">
+
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
