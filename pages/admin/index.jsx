@@ -19,6 +19,22 @@ const Index = ({ orders, products }) => {
     }
   };
 
+  const handleStatus = async (id) => {
+    const item = orderList.filter((order) => order._id === id)[0];
+    const currentStatus = item.status;
+
+    try {
+      const res = await axios.put(`http://localhost:3000/api/orders/${id}`, {
+        status: currentStatus + 1,
+      });
+      setOrderList(
+        orderList.map((order) => (order._id === id ? res.data : order))
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.item}>
@@ -86,7 +102,9 @@ const Index = ({ orders, products }) => {
                 </td>
                 <td>{status[order.status]}</td>
                 <td>
-                  <button>Next Stage</button>
+                  <button onClick={() => handleStatus(order._id)}>
+                    Next Stage
+                  </button>
                 </td>
               </tr>
             </tbody>
