@@ -5,9 +5,12 @@ export default async function handler(req, res) {
   const {
     method,
     query: { id },
+    cookies,
   } = req;
 
-  dbConnect();
+  const token = cookies.token;
+
+  await dbConnect();
 
   if (method === "GET") {
     try {
@@ -19,6 +22,10 @@ export default async function handler(req, res) {
   }
 
   if (method === "PUT") {
+    if (!token || token !== process.env.TOKEN) {
+      return res.status(401).json("Unauthorized!");
+    }
+
     try {
       const product = await Product.create(req.body);
       res.status(201).json(product);
