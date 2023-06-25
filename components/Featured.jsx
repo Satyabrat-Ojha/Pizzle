@@ -6,7 +6,7 @@ const NavbarFeatured = () => {
   const [index, setIndex] = useState(0);
 
   const images = [
-    "/img/featured.png",
+    "/img/featured1.png",
     "/img/featured2.png",
     "/img/featured3.png",
   ];
