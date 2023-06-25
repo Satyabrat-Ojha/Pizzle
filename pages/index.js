@@ -38,7 +38,7 @@ export const getServerSideProps = async (ctx) => {
     admin = true;
   }
 
-  const res = await axios.get(process.env.API_URL + "/api/products");
+  const res = await axios.get("https://pizzle.vercel.app/api/products");
   return {
     props: {
       pizzaList: res.data,
