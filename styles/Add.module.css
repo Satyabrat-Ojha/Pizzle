@@ -1,0 +1,106 @@
+.mainAddButton {
+  padding: 10px;
+  margin: 20px;
+  background-color: #d1411e;
+  width: 150px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(245, 240, 240, 0.52);
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 500px;
+  background-color: white;
+  padding: 0 50px 15px 50px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.close {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.input {
+  border: none;
+  border-bottom: 1px solid gray;
+  outline: none;
+}
+
+.priceContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputSm {
+  width: 25%;
+}
+
+.extra {
+  display: flex;
+  justify-content: space-between;
+}
+
+.extraItems {
+  margin: 0 0 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.extraItem {
+  padding: 5px;
+  padding-top: 3px;
+  font-size: 14px;
+  background-color: white;
+  color: tomato;
+  border: 1px solid tomato;
+  border-radius: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.addButton {
+  width: 25%;
+  border: none;
+  background-color: teal;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 5px 0;
+  align-self: flex-end;
+}
