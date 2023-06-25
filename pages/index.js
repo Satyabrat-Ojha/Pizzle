@@ -14,6 +14,8 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home({ pizzaList, admin }) {
   const [close, setClose] = useState(true);
 
+  console.log(proces.env.VERCEL_URL);
+
   return (
     <>
       <Head>
